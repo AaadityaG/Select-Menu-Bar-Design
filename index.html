@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Select Menu Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="selector">
+            <div id="selectField">
+                <p id="text">Select Social Media</p>
+                <img src="SelectMenu_Img/arrow.png" id="arrowId">
+            </div>
+            <ul id="list" class="hide">
+                <li class="options">
+                    <img src="SelectMenu_Img/facebook.png" alt="">
+                    <p>Facebook</p>
+                </li>
+                <li class="options">
+                    <p>Youtube</p>
+                    <img src="SelectMenu_Img/youtube.png" alt="">
+                </li>
+                <li class="options">
+                    <p>Instagram</p>
+                    <img src="SelectMenu_Img/instagram.png" alt="">
+                </li>
+                <li class="options">
+                    <p>Pinterest</p>
+                    <img src="SelectMenu_Img/pinterest.png" alt="">
+                </li>
+                <li class="options">
+                    <p>Twitter</p>
+                    <img src="SelectMenu_Img/twitter.png" alt="">
+                </li>
+                <li class="options">
+                    <p>Whatsapp</p>
+                    <img src="SelectMenu_Img/whatsapp.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        console.log("nahi ho raha...");
+        let selectField = document.getElementById("selectField");
+        let selectText = document.getElementById("text");
+        let options = document.getElementsByClassName("options");
+        let list = document.getElementById("list");
+        let Aicon = document.getElementById("arrowId");
+
+        selectField.onclick = function(){
+            list.classList.toggle("hide");
+            Aicon.classList.toggle("rotate");
+        }
+        
+        for(op of options){
+            op.onclick = function(){
+                selectText.innerHTML = this.textContent;
+                list.classList.toggle("hide");
+                Aicon.classList.toggle("rotate");
+            }
+        }
+
+    </script>
+</body>
+</html>
